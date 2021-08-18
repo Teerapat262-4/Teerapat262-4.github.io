@@ -47,7 +47,7 @@ p, li {
     letter-spacing: 1px
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
     body {
         width: 75%;
     }
