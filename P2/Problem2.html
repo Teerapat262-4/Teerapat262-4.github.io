@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            let list =[]
+            
+            while (true){
+                var input = Number(prompt("Enter an integer (a negative integer to quit):"));
+                if (input > 0 && input%1==0){
+                    list.push(input) 
+                }
+                else {alert("For the list " + list +", the average is "+ average(list) +" the minimun is "+ min(list)+", and the maximun is "+max(list) );
+                 break}
+            }
+            function average(list){
+                let sum = 0
+                for (let i = 0; i < list.length; i++ ){
+                    sum += list[i];
+                }
+                let avg = sum / list.length;
+                return avg
+            }
+
+            function min(list){
+                let min = Math.min(...list);
+                return min
+            }
+                
+            function max(list){
+                let max = Math.max(...list);
+                return max
+            }
+             
+        </script>
+        
+    </head>
+    <body>
+        <style>
+        .one{
+            font-size: 33px;
+        }
+        .two{
+            font-size: 22px;
+        }
+        </style>
+        <h2 style="text-align: center;">Statistics Calculator!</h2>
+        <p class="one">Write the web app to prompt accepting for a positive integer until the user enters a negative integer</p>
+        <ul class="two">
+        <li>If the entered text is not a positive integer number, then the web app will keep asking for a number until the valid positive integer is entered</li>
+        <li>If the entered text is a negative integer, then the web app will show the statistics (average, min, max) of all entered positive integers</li>
+        </ul>
+        <p class="one">Note:</p>
+        <ul class ="two" style="list-style-type: decimal;">
+        <li>You need to implement functions to check whether an entered text is a positive integer or not and whether an entered text is a negative integer or not</li>
+        <li>You need to implement functions to compute average, min, and max of a list of integers</li>
+        </ul>
+    </body>
+    
+</html>
