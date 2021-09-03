@@ -5,11 +5,17 @@
             
             while (true){
                 var input = Number(prompt("Enter an integer (a negative integer to quit):"));
-                if (input > 0 && input%1==0){
-                    list.push(input) 
+                if (isNaN(input)){
+                    continue
                 }
-                else {alert("For the list " + list +", the average is "+ average(list) +" the minimun is "+ min(list)+", and the maximun is "+max(list) );
-                 break}
+                if (input >= 0 && input%1==0){
+                    list.push(input)
+
+                }
+                else {
+                    alert("For the list " + list +", the average is "+ average(list) +" the minimun is "+ min(list)+", and the maximun is "+max(list) );
+                    break
+                }
             }
             function average(list){
                 let sum = 0
